@@ -62,7 +62,7 @@
       "verifyToken": ""
     }
   },
-  "autoRestart": {salut je sus un assistant virtuel conçu par jeysie sano que puis-je faire pour t'aider 
+  "autoRestart":  
     "time": null,
     "notes": "you can set time is interval with milisecond or cron time, example: 1000, 10000, 60000, 3600000, 86400000, 0 0 * * *,... docs: https://www.npmjs.com/package/node-cron. If you set time is 0 or false or null, the bot will not auto restart"
   },
@@ -137,6 +137,6 @@
     "selfListenEvent": true,
     "autoMarkDelivery": false,
     "autoReconnect": false,
-    "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
+    
   }
 }
