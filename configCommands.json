@@ -1,3 +1,4 @@
+
 『𝐉𝐄𝐘𝐁𝐎𝐓 𝐌𝐄𝐍𝐔』
 
 📌 Préfixe du bot : € 👑 Créé par : ᎫᏋᎩᏚᎥᏋ ᏦᎪᏀᏋᎩᎯᎷᎥ 🔗 Admin principal UID : 61567005304061
@@ -30,7 +31,7 @@
 8. €time - Heure actuelle
 
 
-9. €jeysiebot
+9. €ping - Vérifie si le bot est actif
 
 
 10. €groupinfo - Infos du groupe
@@ -127,12 +128,52 @@
 52. €bot-admin - Affiche tous les admins actuels (réservé aux admins)
 
 
-53. €ping - Vérifie si le bot est actif
 
+def send_message(text):
+print(f"Bot: {text}")
 
+def on_message_received(message):
+if message.lower().startswith("ai "):
+user_input = message[3:].strip()
+# Réponse simple sans IA
+response = f"Tu as demandé : '{user_input}'. Désolé, je ne suis pas connecté à une IA pour répondre."
+send_message(response)
+else:
+print("Message ignoré (non commandé par Ai)")
 
+if name == "main":
+print("Bot prêt à répondre aux messages commençant par 'ai '.")
+
+messages = [  
+    "Ai quel temps fait-il aujourd'hui ?",  
+    "Ai raconte-moi une blague",  
+    "Bonjour bot",  
+    "Ai que peux-tu faire ?"  
+]  
+
+for msg in messages:  
+    print(f"User: {msg}")  
+    on_message_received(msg)
+
+def on_group_joined(group_id, bot_id):
+    print(f"✅ Bot ajouté au groupe {group_id}.")
+    set_bot_nickname(group_id, bot_id, "❦𝐉𝐄𝐘𝐆𝐏𝐓╰_╯🐦")
+
+def set_bot_nickname(group_id, bot_id, new_nick):
+    # Simulation de l'action (à remplacer par un appel réel à l'API ou une automatisation)
+    print(f"🔄 Changement du pseudo du bot dans le groupe {group_id}...")
+    
+    # Ici, tu devrais appeler l'API Facebook ou un script d'automatisation
+    print(f"✅ Pseudo changé pour le bot ({bot_id}) : {new_nick}"❦𝐉𝐄𝐘𝐆𝐏𝐓╰_╯🐦❦")
+
+# Simulation : Le bot est ajouté dans un groupe
+if __name__ == "__main__":
+    group_id = "123456789012345"
+    bot_id = "61567005304061"  # Ton UID principal
+    on_group_joined(group_id, bot_id)
 
 ━━━━━━━━━━━━━━━━━━━━
 
 ⚠️ Toute tentative d’accès à une commande admin sans autorisation sera sanctionnée par le message d’avertissement automatique.
 
+𝐅𝐑𝐎𝐌 𝐉𝐄𝐘𝐒𝐈𝐄 ∞
